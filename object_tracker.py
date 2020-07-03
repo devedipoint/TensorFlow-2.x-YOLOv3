@@ -125,7 +125,7 @@ def Object_tracking(YoloV3, video_path, output_path, input_size=416, show=False,
         # draw original yolo detection
         #image = draw_bbox(image, bboxes, CLASSES=CLASSES, show_label=False, rectangle_colors=rectangle_colors, tracking=True)
 
-        #print("Time: {:.2f}ms, {:.1f} FPS".format(ms, fps))
+        print("Time: {:.2f}ms, {:.1f} FPS".format(ms, fps))
         if output_path != '': out.write(image)
         if show:
             cv2.imshow('output', image)
