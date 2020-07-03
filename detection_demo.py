@@ -23,11 +23,11 @@ if TRAIN_YOLO_TINY:
     Darknet_weights = YOLO_DARKNET_TINY_WEIGHTS
 
 image_path   = "./IMAGES/kite.jpg"
-video_path   = "./IMAGES/street_drive.mp4"
+video_path   = "/yolov3/movies/match.webm"
 
 yolo = Create_Yolov3(input_size=input_size)
 load_yolo_weights(yolo, Darknet_weights) # use Darknet weights
 
-detect_image(yolo, image_path, '', input_size=input_size, show=True, rectangle_colors=(255,0,0))
-#detect_video(yolo, video_path, '', input_size=input_size, show=True, rectangle_colors=(255,0,0))
+#detect_image(yolo, image_path, '', input_size=input_size, show=True, rectangle_colors=(255,0,0))
+detect_video(yolo, video_path, '/yolov3/movies_output/1.avi', input_size=input_size, show=False, rectangle_colors=(255,0,0))
 #detect_realtime(yolo, '', input_size=input_size, show=True, rectangle_colors=(255, 0, 0))
