@@ -28,7 +28,7 @@ Darknet_weights = YOLO_DARKNET_WEIGHTS
 if TRAIN_YOLO_TINY:
     Darknet_weights = YOLO_DARKNET_TINY_WEIGHTS
 
-video_path   = "./IMAGES/test.mp4"
+video_path   = "/mydrive/yolov3/movies/match.webm"
 
 yolo = Create_Yolov3(input_size=input_size)
 load_yolo_weights(yolo, Darknet_weights) # use Darknet weights
@@ -137,4 +137,4 @@ def Object_tracking(YoloV3, video_path, output_path, input_size=416, show=False,
     cv2.destroyAllWindows()
 
 
-Object_tracking(yolo, video_path, "detection.mp4", input_size=input_size, show=True, iou_threshold=0.1, rectangle_colors=(255,0,0), Track_only = ["person"])
+Object_tracking(yolo, video_path, "/mydrive/yolov3/movies_output/detection.mp4", input_size=input_size, show=False, iou_threshold=0.1, rectangle_colors=(255,0,0), Track_only = ["person"])
