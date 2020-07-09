@@ -24,7 +24,7 @@ YOLO_ANCHORS                = [[[10,  13], [16,   30], [33,   23]],
 # Train options
 TRAIN_YOLO_TINY             = False
 TRAIN_SAVE_BEST_ONLY        = True # saves only best model according validation loss (True recommended)
-TRAIN_SAVE_CHECKPOINT       = False # saves all best validated checkpoints in training process (may require a lot disk space) (False recommended)
+TRAIN_SAVE_CHECKPOINT       = True # saves all best validated checkpoints in training process (may require a lot disk space) (False recommended)
 TRAIN_CLASSES               = "/mydrive/yolov3/Stage-2/train-set/person_names.txt" #"mnist/mnist.names"
 TRAIN_ANNOT_PATH            = "/mydrive/yolov3/Stage-2/train-set/person_train.txt" #"mnist/mnist_train.txt"
 TRAIN_LOGDIR                = "/mydrive/yolov3/Stage-2/train-set/log"
@@ -35,11 +35,11 @@ TRAIN_BATCH_SIZE            = 8
 TRAIN_INPUT_SIZE            = 416
 TRAIN_DATA_AUG              = True
 TRAIN_TRANSFER              = True
-TRAIN_FROM_CHECKPOINT       = False # "checkpoints/yolov3_custom_2"
+TRAIN_FROM_CHECKPOINT       = "/mydrive/yolov3/Stage-2/train-set/checkpoints/yolov3" #False # "checkpoints/yolov3_custom_2"
 TRAIN_LR_INIT               = 1e-4
 TRAIN_LR_END                = 1e-6
 TRAIN_WARMUP_EPOCHS         = 2
-TRAIN_EPOCHS                = 300
+TRAIN_EPOCHS                = 1000
 
 # TEST options
 TEST_ANNOT_PATH             = "/mydrive/yolov3/Stage-2/train-set/person_test.txt" #"mnist/mnist_test.txt"
